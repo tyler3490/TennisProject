@@ -8,3 +8,7 @@ scipy
 scikit-image
 opencv_python
 opencv-python-headless
+sympy
+sklearn
+seaborn
+filterpy

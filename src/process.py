@@ -10,9 +10,9 @@ from scipy.signal import find_peaks
 from detection import DetectionModel, center_of_box
 from pose import PoseExtractor
 from smooth import Smooth
-from src.ball_detection import BallDetector
-from src.statistics import Statistics
-from src.stroke_recognition import ActionRecognition
+from ball_detection import BallDetector
+from statistics import Statistics
+from stroke_recognition import ActionRecognition
 from utils import get_video_properties, get_dtype, get_stickman_line_connection
 from court_detection import CourtDetector
 import matplotlib.pyplot as plt
@@ -499,7 +499,7 @@ def video_process(video_path, show_video=False, include_video=True,
 
 def main():
     s = time.time()
-    video_process(video_path='../videos/vid1.mp4', show_video=True, stickman=True, stickman_box=False, smoothing=True,
+    video_process(video_path='/Users/tyler/Documents/GitHub/TennisProject/tennis_rally.mp4', show_video=True, stickman=True, stickman_box=False, smoothing=True,
                   court=True, top_view=True)
     print(f'Total computation time : {time.time() - s} seconds')
 
