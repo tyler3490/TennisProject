@@ -378,7 +378,7 @@ def create_top_view(court_detector, detection_model):
     cv2.destroyAllWindows()
 
 
-def video_process(video_path, show_video=False, include_video=True,
+def video_process(video_path, show_video=True, include_video=True,
                   stickman=True, stickman_box=True, court=True,
                   output_file='output', output_folder='output',
                   smoothing=True, top_view=True):
@@ -499,8 +499,8 @@ def video_process(video_path, show_video=False, include_video=True,
 
 def main():
     s = time.time()
-    video_process(video_path='/Users/tyler/Documents/GitHub/TennisProject/tennis_rally.mp4', show_video=True, stickman=True, stickman_box=False, smoothing=True,
-                  court=True, top_view=True)
+    video_process(video_path='/Users/tyler/Documents/GitHub/TennisProject/2sec_tennis_test.mp4', show_video=True, stickman=False, stickman_box=False, smoothing=True,
+                  court=True, top_view=False)
     print(f'Total computation time : {time.time() - s} seconds')
 
 
