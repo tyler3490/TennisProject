@@ -403,8 +403,8 @@ def video_process(video_path, show_video=True, include_video=True,
     court_detector = CourtDetector()
     detection_model = DetectionModel(dtype=dtype)
     pose_extractor = PoseExtractor(person_num=1, box=stickman_box, dtype=dtype) if stickman else None
-    stroke_recognition = ActionRecognition('storke_classifier_weights.pth')
-    ball_detector = BallDetector('saved states/tracknet_weights_2_classes.pth', out_channels=2)
+    stroke_recognition = ActionRecognition('/Users/tyler/Documents/GitHub/TennisProject/src/saved states/storke_classifier_weights.pth')
+    ball_detector = BallDetector('/Users/tyler/Documents/GitHub/TennisProject/src/saved states/tracknet_weights_2_classes.pth', out_channels=2)
 
     # Load videos from videos path
     video = cv2.VideoCapture(video_path)
@@ -499,8 +499,8 @@ def video_process(video_path, show_video=True, include_video=True,
 
 def main():
     s = time.time()
-    video_process(video_path='/Users/tyler/Documents/GitHub/TennisProject/2sec_tennis_test.mp4', show_video=True, stickman=False, stickman_box=False, smoothing=True,
-                  court=True, top_view=False)
+    video_process(video_path='/Users/tyler/Documents/GitHub/TennisProject/halfSecondQatar.mp4', show_video=True, stickman=False, stickman_box=False, smoothing=True,
+                  court=True, top_view=True)
     print(f'Total computation time : {time.time() - s} seconds')
 
 

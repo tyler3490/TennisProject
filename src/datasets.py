@@ -295,7 +295,7 @@ def get_dataloaders(csv_file, root_dir, transform, batch_size, dataset_type='str
 
 
 if __name__ == '__main__':
-    train_dl, _ = get_dataloaders('../dataset/Dataset/training_model2.csv', root_dir=None, transform=None,
+    train_dl, _ = get_dataloaders('/Users/tyler/Documents/GitHub/TennisProject/src/training_model2.csv', root_dir=None, transform=None,
                                   batch_size=1, dataset_type='tracknet', num_workers=4)
 
     import time

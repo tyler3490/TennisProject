@@ -77,7 +77,7 @@ class ActionRecognition:
         self.max_seq_len = max_seq_len
         self.LSTM = LSTM_model(3, dtype=self.dtype)
         # Load model`s weights
-        saved_state = torch.load('src/saved states/' + model_saved_state, map_location='cpu')
+        saved_state = torch.load(model_saved_state, map_location='cpu')
         self.LSTM.load_state_dict(saved_state['model_state'])
         self.LSTM.eval()
         self.LSTM.type(self.dtype)
